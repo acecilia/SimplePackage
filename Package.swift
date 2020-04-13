@@ -7,6 +7,7 @@ let package = Package(
     name: "SimplePackage",
     products: [
         .executable(name: "simplepackage", targets: ["SimplePackage"]),
+        .executable(name: "simplepackage2", targets: ["SimplePackage2"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -17,6 +18,9 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SimplePackage",
+            dependencies: []),
+        .target(
+            name: "SimplePackage2",
             dependencies: []),
     ]
 )
